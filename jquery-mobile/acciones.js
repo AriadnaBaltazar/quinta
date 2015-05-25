@@ -3,13 +3,13 @@ $(document).ready(function(e){
 document.addEventLitener("deviceready",function(){
 
 $('#izquierda').on ("swipeleft",function(){
-	navigator.notification.alert("deslizo a la izquierda",function(){"Aplicacion5","Aceptar"});
+	navigator.notification.alert("deslizo a la izquierda", function(){"Aplicacion5", "Aceptar"});
 });//barrer izquierda
 
 
 
-$('#derecha').on ("swiperight", function(){
-	navigator.notification.confirm("¿Que quieres hacer?",function(opt){
+$('#derecha').on ("swiperight",function(){
+	navigator.notification.confirm("¿Que quieres hacer?", function(opt){
 		switch(opt)
 		{
 			
@@ -20,7 +20,7 @@ $('#derecha').on ("swiperight", function(){
             case 2: 
 			navigator.notification.vibrate(1000);
 			break;	
-		}//switch opt
+		}//switch(opt)
 	},"Aplicacion5","Beep,Vibrar,Cancelar");//confirm
 	
 });//barrer derecha
